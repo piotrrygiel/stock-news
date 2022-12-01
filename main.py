@@ -47,6 +47,6 @@ data_stock = r_stock.json()
 
 price_dif = float(data_stock["Global Quote"]["10. change percent"][:-1])
 
-if price_dif >= 5 or price_dif <= 5:
+if price_dif >= 5 or price_dif <= -5:
     data_news_top3 = get_news()
     send_notification()
